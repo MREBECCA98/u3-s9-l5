@@ -1,5 +1,6 @@
 import Card from "react-bootstrap/Card";
 import { Component } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 
 class Gallery extends Component {
   state = {
@@ -7,12 +8,13 @@ class Gallery extends Component {
   };
   fetchMovies = async () => {
     try {
-      const response = await fetch(` http://www.omdbapi.com/?s=${this.props.saga}&apikey=e02ef249`);
+      const response = await fetch(`http://www.omdbapi.com/?s=${this.props.saga}&apikey=e02ef249`);
       console.log("saga", this.props.saga);
       if (response.ok) {
-        const data = await response.json();
-        console.log("data", data);
-        this.setState({ gallery: data });
+        const film = await response.json();
+        console.log(film);
+        this.setState({ gallery: film.Search });
+        console.log("film", film.Search);
       }
     } catch (error) {
       console.error("Errore di rete: ", error);
@@ -25,10 +27,17 @@ class Gallery extends Component {
   render() {
     return (
       <>
-        <h1>titolo saga</h1>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px180" />
-        </Card>
+        <Container>
+          <Row>
+            <Col>
+              <h1>{this.props.saga}</h1>
+              {gallery.map}{" "}
+              <Card>
+                <Card.Img variant="top" src={this.state.gallery[0].Poster} />
+              </Card>
+            </Col>
+          </Row>
+        </Container>
       </>
     );
   }

@@ -15,8 +15,8 @@ function App() {
       <MyNav img={<img src={Logo} alt="Netflix Logo" height="40" />} imgProfile={<img src={Avatar} alt="Avatar" style={{ width: "30px" }} />} />;
       <MyNav2 />
       <Gallery saga="Harry Potter" />
-      <Gallery />
-      <Gallery />
+      {/* <Gallery />
+      <Gallery /> */}
       <MyFooter />
     </div>
   );
