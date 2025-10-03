@@ -96,6 +96,12 @@ const MyFooter = function () {
           </Col>
         </Row>
       </Container>
+      <div className="d-flex justify-content-around mt-3">
+        <button className="btn border border-secondary-subtle text-secondary">Service code</button>
+      </div>
+      <div className="d-flex justify-content-around mt-3 flex-wrap">
+        <address className="text-secondary fs-6">1997-2019 Netflix, Inc i - OdOOfcda2fdf9cOde</address>
+      </div>
     </footer>
   );
 };
