@@ -27,15 +27,16 @@ class Gallery extends Component {
   render() {
     return (
       <>
-        <Container>
+        <Container className="my-5 ">
           <Row>
-            <Col>
-              <h1>{this.props.saga}</h1>
-              {gallery.map}{" "}
-              <Card>
-                <Card.Img variant="top" src={this.state.gallery[0].Poster} />
-              </Card>
-            </Col>
+            <h4 className="mb-3">{this.props.saga}</h4>
+            {this.state.gallery.map((card) => (
+              <Col xs={6} md={3} xl={3} key={card.imdbID}>
+                <Card className="border border-dark m-2 ">
+                  <Card.Img variant="top" src={card.Poster} id="img-Card" />
+                </Card>
+              </Col>
+            ))}
           </Row>
         </Container>
       </>

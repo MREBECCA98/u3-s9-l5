@@ -5,7 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 const MyNav = function (props) {
   return (
-    <Navbar expand="lg" style={{ backgroundColor: "#0F0F0F" }}>
+    <Navbar expand="lg" style={{ backgroundColor: "#0F0F0F" }} className="mt-3">
       <Container>
         <Navbar.Brand href="#">{props.img}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -36,7 +36,7 @@ const MyNav = function (props) {
               <i className="bi bi-bell-fill"></i>
             </Nav.Link>
 
-            <NavDropdown menuVariant="dark" title={props.imgProfile} id="basic-nav-dropdown" className="ms-auto  ">
+            <NavDropdown menuVariant="dark" title={props.imgProfile} id="basic-nav-dropdown" className="ms-auto d-none d-md-none d-lg-block ">
               <NavDropdown.Item href="#" className="text-white">
                 Your Profile
               </NavDropdown.Item>

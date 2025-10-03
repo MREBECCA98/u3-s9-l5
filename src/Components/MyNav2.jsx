@@ -27,7 +27,7 @@ const MyNav2 = function () {
 
         {/* dropdown */}
 
-        <Nav.Link href="#">
+        <Nav.Link href="#" className=" d-none d-md-none d-lg-block">
           <i className="bi bi-list text-white fs-1"></i>
           <i className="bi bi-three-dots text-white fs-1"></i>
         </Nav.Link>
