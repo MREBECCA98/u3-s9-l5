@@ -7,7 +7,7 @@ const MyNav2 = function () {
   return (
     <Navbar expand="lg" style={{ backgroundColor: "#0F0F0F" }}>
       <Container>
-        <Nav className=" text-white d-flex justify-content-center align-items-center gap-5">
+        <Nav className="  d-flex justify-content-center align-items-center gap-5 text-white">
           <Nav.Link href="#" className="text-white">
             <h2>TV Shows</h2>
           </Nav.Link>
