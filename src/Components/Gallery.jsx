@@ -28,7 +28,7 @@ class Gallery extends Component {
     return (
       <>
         <Container className="my-5 ">
-          <Row>
+          <Row className="g-0">
             <h4 className="mb-3">{this.props.saga}</h4>
             {this.state.gallery.map((card) => (
               <Col xs={6} md={3} xl={3} key={card.imdbID}>
